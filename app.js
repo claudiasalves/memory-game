@@ -87,7 +87,7 @@ function checkMatch() {
     cards[optionOneId].setAttribute('src', 'images/blank.png')
     cards[optionTwoId].setAttribute('src', 'images/blank.png')
   }
-
+  
   resultDisplay.textContent = cardsWon.length
   cardsChosen = []
   cardsChosenIds = []
