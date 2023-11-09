@@ -72,21 +72,16 @@ function checkMatch() {
   const cards = document.querySelectorAll('img')
   const optionOneId = cardsChosenIds[0]
   const optionTwoId = cardsChosenIds[1]
-  console.log("cjecl for match")
 
   if(optionOneId == optionTwoId) {
     cards[optionOneId].setAttribute('src', 'images/blank.png')
     cards[optionTwoId].setAttribute('src', 'images/blank.png')
     alert("You have clicked the same image!")
-
-  }
-
-  if (cardsChosen[0] == cardsChosen[1]) {
+  } else if (cardsChosen[0] == cardsChosen[1]) {
     cards[optionOneId].setAttribute('src', 'images/white.png')
     cards[optionTwoId].setAttribute('src', 'images/white.png')
     cards[optionOneId].removeEventListener('click', flipCard)
     cards[optionTwoId].removeEventListener('click', flipCard)
-
     cardsWon.push(cardsChosen)
   } else {
     cards[optionOneId].setAttribute('src', 'images/blank.png')
